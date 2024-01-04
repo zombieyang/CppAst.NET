@@ -27,7 +27,7 @@ namespace CppAst
         /// <returns>The display name</returns>
         public static string GetDisplayName(this CppType type)
         {
-            if (type is ICppMember member) return member.Name;
+            if (type is ICppMember member) return type.FullName;
             return type.ToString();
         }
 
